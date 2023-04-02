@@ -13,6 +13,10 @@ def get(array, index, default=None):
     """
     if index < 0:
         return default
+    try:
+        array[index]
+    except IndexError:
+        return default
 
     return array[index]
 
