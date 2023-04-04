@@ -11,11 +11,7 @@ def get(array, index, default=None):
     :param default: значение по-умолчанию.
     :return: значение по индексу или значение по-умолчанию.
     """
-    if index < 0:
-        return default
-    try:
-        array[index]
-    except IndexError:
+    if index <= 0:
         return default
 
     return array[index]
